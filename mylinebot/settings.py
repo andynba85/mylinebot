@@ -25,7 +25,7 @@ LINE_CHANNEL_SECRET = '79cb740ca5ea05be107f77e7e03af3f0'
 SECRET_KEY = '$)3ktripx#3k664wh(7syvi@8mqw#bomxqi3(ipbh-jja+7$@g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '*'

@@ -66,13 +66,44 @@ def callback(request):
                             TextSendMessage ( text = content ))
                         return  0
                     '''
+                    #爬取科技新報ai專欄的資料
                     if  event.message.text  ==  "科技新報" :
                         content = technews ()
                         message.append(TextSendMessage(text=content))
+                        line_bot_api.reply_message(event.reply_token,message)
+                    elif(event.message.text  ==  "記帳"):
+                        buttons_template = TemplateSendMessage(
+                            alt_text='開始記帳',
+                            template=ButtonsTemplate(
+                                title='選擇服務',
+                                text='請選擇',
+                                thumbnail_image_url='https://i.imgur.com/pm1vdnI.jpg',
+                                actions=[
+                                    MessageTemplateAction(
+                                        label='新增',
+                                        text='新增'
+                                    ),
+                                    MessageTemplateAction(
+                                        label='查詢',
+                                        text='查詢'
+                                    ),
+                                    MessageTemplateAction(
+                                        label='刪除',
+                                        text='刪除'
+                                    ),
+                                    MessageTemplateAction(
+                                        label='月',
+                                        text='月'
+                                    )
+                                ]
+                            )
+                        )
+                        line_bot_api.reply_message(event.reply_token, buttons_template)
                     else:
                         message.append(TextSendMessage(text='文字訊息'))
+                        line_bot_api.reply_message(event.reply_token,message)
                     #message.append(TextSendMessage(text='文字訊息'))
-                    line_bot_api.reply_message(event.reply_token,message)
+                    
 
                 elif event.message.type=='image':
                     message.append(TextSendMessage(text='圖片訊息'))
