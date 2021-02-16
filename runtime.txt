@@ -1,1 +1,1 @@
-python-3.6.5 :: Anaconda,Inc.
+python-3.6.5
