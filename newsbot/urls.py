@@ -1,5 +1,5 @@
 from django.urls import path
-from . import views
+from newsbot import views
 
 urlpatterns = [
     path('callback', views.callback)
