@@ -28,7 +28,7 @@ SECRET_KEY = '$)3ktripx#3k664wh(7syvi@8mqw#bomxqi3(ipbh-jja+7$@g'
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'myyylinebot.herokuapp.com'
+    '*'
 ]
 
 
@@ -126,4 +126,4 @@ STATIC_URL = '/static/'
 STATICILES_DIRS = [
     os.path.join(BASE_DIR,'static')#加入static路徑
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
