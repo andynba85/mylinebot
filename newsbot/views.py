@@ -36,6 +36,7 @@ def  technews ():
 
 @csrf_exempt
 def callback(request):
+    '''
     if request.method == 'POST':
         signature = request.META['HTTP_X_LINE_SIGNATURE']
         body = request.body.decode('utf-8')
@@ -56,8 +57,8 @@ def callback(request):
         return HttpResponse()
     else:
         return HttpResponseBadRequest()
+    '''
 
-'''
     if request.method == 'POST':
         #先設定一個要回傳的message空集合
         message=[]
@@ -155,4 +156,3 @@ def callback(request):
         return HttpResponse()
     else:
         return HttpResponseBadRequest()
-'''
