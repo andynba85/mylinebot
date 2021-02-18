@@ -36,7 +36,7 @@ def  technews ():
 
 @csrf_exempt
 def callback(request):
-if request.method == 'POST':
+    if request.method == 'POST':
         signature = request.META['HTTP_X_LINE_SIGNATURE']
         body = request.body.decode('utf-8')
 
