@@ -80,6 +80,7 @@ if request.method == 'POST':
                 print(event.message.type)
                 if event.message.type=='text':
                     '''
+                    '''
                     if  event . message . text  ==  "科技新報" :
                         content  =  technews ()
                         print(content)
@@ -87,6 +88,7 @@ if request.method == 'POST':
                             event . reply_token ,
                             TextSendMessage ( text = content ))
                         return  0
+                    '''
                     '''
                     #爬取科技新報ai專欄的資料
                     if  event.message.text  ==  "科技新報" :
